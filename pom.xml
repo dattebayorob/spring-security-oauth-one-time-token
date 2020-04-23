@@ -17,6 +17,10 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>dattebayorob_spring-security-oauth-one-time-token</sonar.projectKey>
+		<sonar.organization>dattebayorob-github</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login></sonar.login>
 	</properties>
 
 	<dependencies>
@@ -87,6 +91,30 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.3</version>
+				<configuration>
+					<destFile>${basedir}/target/jacoco.exec</destFile>
+					<dataFile>${basedir}/target/jacoco.exec</dataFile>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,4 +1,4 @@
-package com.dtb.springsecurityoauthonetimetoken.config.security;
+package com.dtb.springsecurityoauthonetimetoken.service.impl;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;

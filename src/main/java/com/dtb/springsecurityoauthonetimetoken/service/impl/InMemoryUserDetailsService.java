@@ -1,4 +1,4 @@
-package com.dtb.springsecurityoauthonetimetoken.config.security;
+package com.dtb.springsecurityoauthonetimetoken.service.impl;
 
 import java.util.Arrays;
 import java.util.HashSet;
